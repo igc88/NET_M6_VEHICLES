@@ -13,14 +13,16 @@ namespace NET_M6
         public string matricula;
         public string color;
         public double diametroRueda;
-        public int ruedaDel;
-        public int ruedaTras;
+
+        public List<Rueda> ruedasDelanteras = new List<Rueda>();
+        public List<Rueda> ruedasTraseras = new List<Rueda>();
 
         // METODOS
         public bool comprobarMatricula(string matricula)
         {
-            if (matricula.Length > 8) { return false; }
+            if ((matricula.Length > 7) && (matricula.Length < 6)) { return false; }
             if (numsMatricula(matricula)!=4 && (letrasMatricula(matricula)<2 || letrasMatricula(matricula)>3)) { return false; }
+            
             return true;
         }
         public int numsMatricula(string matricula)
@@ -46,6 +48,14 @@ namespace NET_M6
                 }
             }
             return cont;
+        }
+
+        public void anadirRueda(string marca, double diametro, bool delantera=true) {
+            if (delantera) {
+                ruedasDelanteras.Add(new Rueda(marca, diametro));
+            } else {
+                ruedasTraseras.Add(new Rueda(marca, diametro));
+            }
         }
     }
 }

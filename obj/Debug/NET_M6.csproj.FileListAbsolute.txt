@@ -1,0 +1,7 @@
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\bin\Debug\NET_M6.exe.config
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\bin\Debug\NET_M6.exe
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\bin\Debug\NET_M6.pdb
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.csprojAssemblyReference.cache
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.csproj.CoreCompileInputs.cache
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.exe
+C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.pdb

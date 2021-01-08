@@ -49,6 +49,7 @@
     <Compile Include="Clases\Vehiculos\Camion.cs" />
     <Compile Include="Clases\Vehiculos\Coche.cs" />
     <Compile Include="Clases\Vehiculos\Moto.cs" />
+    <Compile Include="Clases\Vehiculos\Rueda.cs" />
     <Compile Include="Clases\Vehiculos\Vehiculo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

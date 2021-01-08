@@ -5,9 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace NET_M6 {
-    class Coche:Vehiculo
-    {
+    class Coche : Vehiculo {
         // ATRIBUTOS
-        const int ruedas = 4;
+        public int NumRuedasDelanteras = 2 ;
+        public int NumRuedasTraseras = 2;
+
+        public Coche(string matricula, string marca, string color) {
+            this.matricula = matricula;
+            this.marca = marca;
+            this.color = color;
+        }
     }
 }
