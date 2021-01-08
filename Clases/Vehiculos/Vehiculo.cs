@@ -14,20 +14,16 @@ namespace NET_M6
         public string color;
         public double diametroRueda;
 
-        public List<Rueda> ruedasDelanteras = new List<Rueda>();
-        public List<Rueda> ruedasTraseras = new List<Rueda>();
-
         // METODOS
         public bool comprobarMatricula(string matricula)
         {
-            if ((matricula.Length > 7) && (matricula.Length < 6)) { return false; }
-            if (numsMatricula(matricula)!=4 && (letrasMatricula(matricula)<2 || letrasMatricula(matricula)>3)) { return false; }
-            
+            if ((matricula.Length > 7) || (matricula.Length < 6)) { return false; }
+            if (numsMatricula(matricula) != 4 && (letrasMatricula(matricula) < 2 || letrasMatricula(matricula) > 3)) { return false; }
             return true;
         }
         public int numsMatricula(string matricula)
         {
-            string numeros= "0123456789";
+            string numeros = "0123456789";
             int num = 0;
             for (int i = 0; i < matricula.Length; i++)
             {
@@ -50,14 +46,32 @@ namespace NET_M6
             return cont;
         }
 
-        public void anadirRueda(string marca, double diametro, bool delantera=true) {
-            if (delantera) {
+        public List<Rueda> ruedasDelanteras = new List<Rueda>();
+        public List<Rueda> ruedasTraseras = new List<Rueda>();
+
+        public void anadirRuedaDel(string marca, double diametro)
+        {
+            bool delantera = true;
+            if (delantera)
+            {
                 ruedasDelanteras.Add(new Rueda(marca, diametro));
-            } else {
-                ruedasTraseras.Add(new Rueda(marca, diametro));
             }
         }
+        public void anadirRuedaTras(string marca, double diametro)
+        {
+            bool trasera = true;
+            if (trasera)
+            {
+            ruedasTraseras.Add(new Rueda(marca, diametro));
+            }
+        }
+
+        }
     }
-}
+    
+    
+
+
+
 
     

@@ -5,3 +5,10 @@ C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.csprojAssembly
 C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.csproj.CoreCompileInputs.cache
 C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.exe
 C:\Users\Iago\source\repos\igc88\NET_M6_VEHICLES\obj\Debug\NET_M6.pdb
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\bin\Debug\NET_M6.exe.config
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\bin\Debug\NET_M6.exe
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\bin\Debug\NET_M6.pdb
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\obj\Debug\NET_M6.csprojAssemblyReference.cache
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\obj\Debug\NET_M6.csproj.CoreCompileInputs.cache
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\obj\Debug\NET_M6.exe
+C:\Users\viiksen\Documents\curso NET\GitKraken\NET_M6_VEHICLES\obj\Debug\NET_M6.pdb
