@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "EasyConsole.Netstandard/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/EasyConsole.Netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EasyConsole.Netstandard.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasyConsole.Netstandard/1.0.0": {
+      "sha512": "aVJ7GMeP880lM5/AT97YTVVhaBtDDpWq1xBa7cZ1Em87xJqRbOkuxCkGFQTJKJNCpdtaUO6bzJOyeW96DBoa9w==",
+      "type": "package",
+      "path": "easyconsole.netstandard/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easyconsole.netstandard.1.0.0.nupkg.sha512",
+        "easyconsole.netstandard.nuspec",
+        "lib/netstandard2.0/EasyConsole.Netstandard.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "EasyConsole.Netstandard >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\wendy\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\wendy\\Documents\\GitHub\\NET_M6_VEHICLES\\NET_M6_VEHICLES\\NET_M6.csproj",
+      "projectName": "NET_M6",
+      "projectPath": "C:\\Users\\wendy\\Documents\\GitHub\\NET_M6_VEHICLES\\NET_M6_VEHICLES\\NET_M6.csproj",
+      "packagesPath": "C:\\Users\\wendy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wendy\\Documents\\GitHub\\NET_M6_VEHICLES\\NET_M6_VEHICLES\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\wendy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "EasyConsole.Netstandard": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

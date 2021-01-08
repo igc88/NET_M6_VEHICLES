@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8NuDj9GpJsZndrJBhhylXIh52DXpWjJLUkld+RsdxwzLe6Tn2ULdHkP8y/8AEqFZ/10pBUffef+IOAw8/p+mpA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wendy\\Documents\\GitHub\\NET_M6_VEHICLES\\NET_M6_VEHICLES\\NET_M6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wendy\\.nuget\\packages\\easyconsole.netstandard\\1.0.0\\easyconsole.netstandard.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

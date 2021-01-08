@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET_M6", "NET_M6.csproj", "{B0118182-872A-44E8-9E7A-BC97E1221C94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET_M6", "NET_M6_VEHICLES\NET_M6.csproj", "{C064F15E-5EDF-41B0-9F23-84E3D2C42666}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B0118182-872A-44E8-9E7A-BC97E1221C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0118182-872A-44E8-9E7A-BC97E1221C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0118182-872A-44E8-9E7A-BC97E1221C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0118182-872A-44E8-9E7A-BC97E1221C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C064F15E-5EDF-41B0-9F23-84E3D2C42666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C064F15E-5EDF-41B0-9F23-84E3D2C42666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C064F15E-5EDF-41B0-9F23-84E3D2C42666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C064F15E-5EDF-41B0-9F23-84E3D2C42666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
