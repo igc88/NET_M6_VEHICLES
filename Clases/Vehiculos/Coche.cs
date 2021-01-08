@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace NET_M6 {
-    class Coche {
+    class Coche:Vehiculo
+    {
+        // ATRIBUTOS
+        const int ruedas = 4;
     }
 }

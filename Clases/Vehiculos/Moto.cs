@@ -4,7 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NET_M6.Clases {
-    class Moto {
+namespace NET_M6 {
+    class Moto:Vehiculo 
+    {
+        // ATRIBUTOS
+        const int ruedas = 2;
+
+
+        //METODOS
+         
     }
 }
