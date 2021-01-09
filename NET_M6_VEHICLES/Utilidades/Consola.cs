@@ -30,5 +30,21 @@ namespace NET_M6.Utilidades
             return d;
 
         }
+
+        public static bool PedirSiNo(string mensaje)
+        {
+            Console.WriteLine(mensaje);
+            ConsoleKey respuesta;
+            do
+            {
+                Console.Write("Introduce [S]í o [N]o:");
+                respuesta = Console.ReadKey(false).Key;
+                if (respuesta != ConsoleKey.Enter)
+                    Console.WriteLine();
+
+            } while (respuesta != ConsoleKey.S && respuesta != ConsoleKey.N);
+
+            return respuesta == ConsoleKey.S;
+        }
     }
 }
