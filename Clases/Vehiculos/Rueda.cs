@@ -8,12 +8,12 @@ namespace NET_M6 {
     class Rueda
     {
         // ATRIBUTOS
-        public string marca;
+        public string marcaRueda;
         public double diametro;
         // CONSTRUCTORES
-        public Rueda(string marca, double diametro) 
+        public Rueda(string marcaRueda, double diametro) 
         {
-            this.marca = marca;
+            this.marcaRueda = marcaRueda;
             this.diametro = diametro;
         }
         // METODOS

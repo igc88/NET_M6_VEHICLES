@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Personas\Conductor.cs" />
+    <Compile Include="Clases\Personas\Licencia.cs" />
+    <Compile Include="Clases\Personas\Persona.cs" />
+    <Compile Include="Clases\Personas\Titular del vehiculo.cs" />
+    <Compile Include="Clases\Vehiculos\Camion.cs" />
     <Compile Include="Clases\Vehiculos\Coche.cs" />
     <Compile Include="Clases\Vehiculos\Moto.cs" />
     <Compile Include="Clases\Vehiculos\Rueda.cs" />
