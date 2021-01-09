@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static NET_M6.Utilidades.Consola;
 
-namespace NET_M6 {
+namespace NET_M6
+{
     public class Vehiculo : IVehiculo
     {
         public string Matricula { get; set; }
@@ -18,7 +17,7 @@ namespace NET_M6 {
         public char TiposLicencia { get; set; }
         public Titular Titular { get; set; }
         public Conductor Conductor { get; set; }
-
+        public IEnumerable<IPersona> ListaPersonas { get; set; }
 
         public Vehiculo(string matricula, string marca, string color, int numRuedasDelanteras, int numRuedasTraseras, char tiposLicencia)
         {
@@ -30,6 +29,7 @@ namespace NET_M6 {
             RuedasDelanteras = new List<IRueda>();
             RuedasTraseras = new List<IRueda>();
             TiposLicencia = tiposLicencia;
+            ListaPersonas = new List<IPersona>();
 
             if (!ComprobarMatricula())
                 throw new ArgumentException("Debe contener 4 números y 2 o 3 letras", nameof(matricula));

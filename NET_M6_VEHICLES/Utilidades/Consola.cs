@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NET_M6.Utilidades
 {
@@ -11,6 +7,7 @@ namespace NET_M6.Utilidades
         public static string PedirString(string mensaje)
         {
             Console.WriteLine(mensaje);
+
             return Console.ReadLine();
         }
 
@@ -23,9 +20,7 @@ namespace NET_M6.Utilidades
             {
                 esDouble = double.TryParse(Console.ReadLine(), out d);
                 if (!esDouble)
-                {
                     Console.WriteLine("Introduce un double");
-                }
             };
             return d;
 

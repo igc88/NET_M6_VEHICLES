@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static NET_M6.Utilidades.Consola;
 
-namespace NET_M6 {
+namespace NET_M6
+{
     public class Camion: Vehiculo {
-        public Camion(string matricula, string marca, string color) : base(matricula, marca, color, 2, 4, 'C')
+        private const char LicenciaNecesaria = 'C';
+        public Camion(string matricula, string marca, string color) : base(matricula, marca, color, 2, 4, LicenciaNecesaria)
         {
         }
 
-        public static Camion CrearCamion()
+        public static Camion CrearCamion(Titular titular)
         {
             bool construye = false;
             Camion camion = null;
@@ -22,8 +20,19 @@ namespace NET_M6 {
                     var matricula = PedirString("Introduce la matricula");
                     var marca = PedirString("Introduce la marca");
                     var color = PedirString("Introduce el color");
+
                     camion = new Camion(matricula, marca, color);
-                    camion.AñadirRuedas();
+                    camion.Titular = titular;
+                    if (PedirSiNo("Quieres que el titular sea también el conductor?"))
+                    {
+                        camion.Conductor = titular;
+                    }
+                    else
+                    {
+                        Conductor c = Conductor.CreaConductor();
+                        if (c.LicenciaConducir.TiposLicencia != LicenciaNecesaria)
+                            throw new ArgumentException("No tienes la licencia adecuada.", nameof(c));
+                    }
 
                     construye = true;
                 }

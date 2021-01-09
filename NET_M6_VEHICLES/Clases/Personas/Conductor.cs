@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static NET_M6.Utilidades.Consola;
 
 
-namespace NET_M6 {
+namespace NET_M6
+{
     public class Conductor : Persona
     {
         public Conductor(string nombre, string apellido, string fechaNacimiento, Licencia licenciaConducir): base(nombre, apellido,fechaNacimiento, licenciaConducir)
@@ -24,7 +21,6 @@ namespace NET_M6 {
             int id = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Introduce licencia de conducir: A / B / C");
             char licencia = Convert.ToChar(Console.ReadLine());
-            Console.WriteLine(licencia);
             string nombreCompleto = nombre + " " + apellido;
             string fechaCaducidad = PedirString("Introduce fecha de caducidad de licencia");
 

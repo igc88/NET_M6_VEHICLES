@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace NET_M6
 {
@@ -13,12 +9,11 @@ namespace NET_M6
         string Color { get; set; }
         int NumRuedasDelanteras { get; set; }
         int NumRuedasTraseras { get; set; }
-        //IEnumerable<IRueda> Ruedas { get; set; }
-
         IEnumerable<IRueda> RuedasDelanteras { get; set; }
         IEnumerable<IRueda> RuedasTraseras { get; set; }
-
         char TiposLicencia { get; set; }
+        Titular Titular { get; set; }
+        IEnumerable<IPersona> ListaPersonas { get; set; }
         bool ComprobarMatricula();
 
     }

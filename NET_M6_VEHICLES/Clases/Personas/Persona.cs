@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET_M6 {
+﻿namespace NET_M6
+{
     public class Persona : IPersona
     {
         public string Nombre { get; set; }
