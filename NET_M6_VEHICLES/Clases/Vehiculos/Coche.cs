@@ -25,6 +25,8 @@ namespace NET_M6
                     var color = PedirString("Introduce el color"); // "Rojo";
                     coche = new Coche(matricula, marca, color);
 
+                    coche.AñadirRuedas();
+
                     Console.WriteLine("Escoge un titular:");
                     var titulares = personas.Where(x => x is Titular).Select(x => x as Titular);
                     for (int i = 0; i < titulares.Count(); i++)

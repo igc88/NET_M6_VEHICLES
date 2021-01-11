@@ -35,18 +35,16 @@ namespace NET_M6
                             Camion c = Camion.CrearCamion(arrPersonas);
                             arrVehiculos.Add(c);
                         })
-                        .Add("Atrás", () =>
+                        .Add("Lista", () =>
                         {
-                            foreach (var i in arrPersonas)
-                            {
-                                Console.WriteLine("----------Personas----------");
-                                Console.WriteLine(i.ToString());
-                            }
+                            Console.WriteLine("----------Vehiculos----------");
                             foreach (var i in arrVehiculos)
                             {
-                                Console.WriteLine("----------Vehiculos----------");
                                 Console.WriteLine(i.ToString());
                             }
+                        })
+                        .Add("Atrás", () =>
+                        {
                             atras = true;
                         });
                     while (!atras)
@@ -60,7 +58,7 @@ namespace NET_M6
                     var menuVehiculos = new EasyConsole.Menu()
                         .Add("Titular", () =>
                         {
-                            var t = Titular.CreaConductor();
+                            var t = Titular.CreaTitular();
                             arrPersonas.Add(t);
                         })
                         .Add("Conductor", () =>
@@ -68,18 +66,16 @@ namespace NET_M6
                             var c = Conductor.CreaConductor();
                             arrPersonas.Add(c);
                         })
-                        .Add("Atrás", () =>
+                        .Add("Lista", () =>
                         {
+                            Console.WriteLine("----------Personas----------");
                             foreach (var i in arrPersonas)
                             {
-                                Console.WriteLine("----------Personas----------");
                                 Console.WriteLine(i.ToString());
                             }
-                            foreach (var i in arrVehiculos)
-                            {
-                                Console.WriteLine("----------Vehiculos----------");
-                                Console.WriteLine(i.ToString());
-                            }
+                        })
+                        .Add("Atrás", () =>
+                        {
                             atras = true;
                         });
                     while (!atras)

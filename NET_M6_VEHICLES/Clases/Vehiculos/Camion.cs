@@ -23,7 +23,7 @@ namespace NET_M6
                     var marca = PedirString("Introduce la marca");
                     var color = PedirString("Introduce el color");
                     camion = new Camion(matricula, marca, color);
-
+                    camion.AñadirRuedas();
                     Console.WriteLine("Escoge un titular:");
                     var titulares = personas.Where(x => x is Titular).Select(x => x as Titular);
                     for (int i = 0; i < titulares.Count(); i++)

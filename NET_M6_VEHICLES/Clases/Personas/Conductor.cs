@@ -13,7 +13,7 @@ namespace NET_M6
 
         public static Conductor CreaConductor()
         {
-            Console.WriteLine("----------Crear un conductor nuevo----------");
+
             string nombre = PedirString("Introduce nombre");
             string apellido = PedirString("Introduce apellido");
             string fechaNacimiento = PedirString("Introduce fecha de nacimiento");
@@ -32,7 +32,7 @@ namespace NET_M6
 
         public override string ToString()
         {
-            return @$"Nombre: {Nombre} Apellido: {Apellido} ";
+            return @$"Nombre: {Nombre} Apellido: {Apellido} Licencia: {LicenciaConducir.TiposLicencia}";
         }
 
     }

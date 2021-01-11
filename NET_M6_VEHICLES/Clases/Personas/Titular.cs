@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static NET_M6.Utilidades.Consola;
 
-namespace NET_M6 {
+namespace NET_M6
+{
     public class Titular : Conductor
     {
         public bool Seguro { get; set; }
@@ -18,7 +16,28 @@ namespace NET_M6 {
 
         public override string ToString()
         {
-            return @$"Nombre: {Nombre} Apellido: {Apellido} ";
+            return base.ToString() + " Titular: Sí";
+        }
+
+        public static Titular CreaTitular()
+        {
+            string nombre = PedirString("Introduce nombre");
+            string apellido = PedirString("Introduce apellido");
+            string fechaNacimiento = PedirString("Introduce fecha de nacimiento");
+
+            Console.WriteLine("Indroduce id");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Introduce licencia de conducir: A / B / C");
+            char licencia = Convert.ToChar(Console.ReadLine());
+            string nombreCompleto = nombre + " " + apellido;
+            string fechaCaducidad = PedirString("Introduce fecha de caducidad de licencia");
+
+            Licencia lic = new Licencia(id, licencia, nombreCompleto, fechaCaducidad);
+
+            var seguro = PedirSiNo("Tiene seguro?");
+            var garaje = PedirSiNo("Tiene garaje?");
+
+            return new Titular(nombre, apellido, fechaNacimiento, lic, seguro, garaje);
         }
 
     }
