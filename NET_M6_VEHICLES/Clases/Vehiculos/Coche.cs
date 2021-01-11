@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using static NET_M6.Utilidades.Consola;
 
 namespace NET_M6
@@ -10,31 +12,67 @@ namespace NET_M6
         {
         }
 
-        public static Coche CrearCoche(Titular titular)
+        public static Coche CrearCoche(IEnumerable<IPersona> personas)
         {
             bool construye = false;
             Coche coche = null;
             while (!construye)
             {
-                if (titular.LicenciaConducir.TiposLicencia != LicenciaNecesaria)
-                    throw new ArgumentException("No tienes la licencia adecuada.", nameof(titular));
                 try
                 {
-                    var matricula = "1234HWT"; // PedirString("Introduce la matricula");
-                    var marca = "Chery"; // PedirString("Introduce la marca");
-                    var color = "Rojo"; // PedirString("Introduce el color");
-                    
+                    var matricula = PedirString("Introduce la matricula"); // = "1234HWT";
+                    var marca = PedirString("Introduce la marca"); // "Chery";
+                    var color = PedirString("Introduce el color"); // "Rojo";
                     coche = new Coche(matricula, marca, color);
-                    coche.Titular = titular;
+
+                    Console.WriteLine("Escoge un titular:");
+                    var titulares = personas.Where(x => x is Titular).Select(x => x as Titular);
+                    for (int i = 0; i < titulares.Count(); i++)
+                    {
+                        Console.WriteLine($"{i + 1}: {titulares.ElementAt(i).Nombre} {titulares.ElementAt(i).Apellido}");
+                    }
+                    int seleccionado = 0;
+                    do
+                    {
+                        Console.WriteLine("Que titular quieres?");
+                        try
+                        {
+                            seleccionado = int.Parse(Console.ReadLine());
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Introduce un número");
+                        }
+                    } while (seleccionado <= 0 || seleccionado > titulares.Count());
+                    coche.Titular = titulares.ElementAt(seleccionado - 1);
                     if (PedirSiNo("Quieres que el titular sea también el conductor?"))
                     {
-                        coche.Conductor = titular;
+                        coche.Conductor = coche.Titular;
                     }
                     else
                     {
-                        Conductor c = Conductor.CreaConductor();
-                        if (c.LicenciaConducir.TiposLicencia != LicenciaNecesaria)
-                            throw new ArgumentException("No tienes la licencia adecuada.", nameof(c));
+                        Console.WriteLine("Escoge un conductor:");
+                        var conductores = personas.Where(x => x is Conductor).Select(x => x as Conductor);
+                        for (int i = 0; i < conductores.Count(); i++)
+                        {
+                            Console.WriteLine($"{i + 1}: {conductores.ElementAt(i).Nombre} {conductores.ElementAt(i).Apellido}");
+                        }
+                        int conductorSeleccionado = 0;
+                        do
+                        {
+                            Console.WriteLine("Que conductor quieres?");
+                            try
+                            {
+                                conductorSeleccionado = int.Parse(Console.ReadLine());
+                            }
+                            catch
+                            {
+                                Console.WriteLine("Introduce un número");
+                            }
+                        } while (conductorSeleccionado <= 0 || conductorSeleccionado > conductores.Count());
+                        coche.Conductor = conductores.ElementAt(conductorSeleccionado - 1);
+                        if (coche.Conductor.LicenciaConducir.TiposLicencia != LicenciaNecesaria)
+                            throw new Exception("No tienes la licencia adecuada.");
                     }
                     
                     construye = true;

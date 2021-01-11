@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using static NET_M6.Utilidades.Consola;
 
 
@@ -27,6 +28,11 @@ namespace NET_M6
             Licencia lic = new Licencia(id, licencia, nombreCompleto, fechaCaducidad);
 
             return new Conductor(nombre, apellido, fechaNacimiento, lic);
+        }
+
+        public override string ToString()
+        {
+            return @$"Nombre: {Nombre} Apellido: {Apellido} ";
         }
 
     }

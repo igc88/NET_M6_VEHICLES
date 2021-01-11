@@ -63,5 +63,10 @@ namespace NET_M6
             RuedasTraseras = ruedasTraseras;
         }
 
+        public override string ToString()
+        {
+            return @$"Matricula: {Matricula} Licencia: {TiposLicencia} ";
+        }
+
     }
 }

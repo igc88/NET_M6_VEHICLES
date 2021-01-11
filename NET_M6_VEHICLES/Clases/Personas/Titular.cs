@@ -15,5 +15,11 @@ namespace NET_M6 {
             Seguro = seguro;
             Garaje = garaje;
         }
+
+        public override string ToString()
+        {
+            return @$"Nombre: {Nombre} Apellido: {Apellido} ";
+        }
+
     }
 }
